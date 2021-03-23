@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/* Reset */
+* {
+    color: #000;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #333;
+}
+
+a:visited {
+    color: #333;
+}
+
+a:hover {
+    color: #444;
+}
+
+a:active {
+    color: #555;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Reset */
+
+
+div#warp {
+    width: 460px;
+    padding: 20px;
+    border: 1px solid #000;
+    margin: 0 auto;
+}
+
+/* 멀티탭 시작 */
+
+/* 멀티탭 공통작업 시작 */
+div#tabArea {
+    /* 탭버튼과 탭내용을 둘러싼 외부 */
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+    /*    border: 1px solid #08f;*/
+}
+
+button {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border: 1px solid #aaa;
+    /* 버튼의 테두리는 약간 둥근데 테두리선을 넣어주면 직각이 됨*/
+    border-bottom: none;
+
+    position: relative;
+    top: 1px;
+    /* 버튼이 3차원에 있어 2차원의 content를 덮여 씀 버튼을 살짝내려 버튼과 내용의 경계선 없애기 */
+}
+
+button:first-child {
+    margin-left: 30px;
+    /* position에서 top left대신에 옆에 다른 버튼도 와야하니 ml걸어주는게 좋음*/
+}
+
+div#tabArea > div {
+    padding: 26px 10px;
+    border: 1px solid #aaa;
+
+    display: inline-block;
+    /* width를 쓰지 않고 사진크기에 맞춰 테두리만들기 위해 만약 width를 지정한다면 이미지의 크기가 달라지면 또 계산해야 하니깐 */
+}
+
+/* 멀티탭 공통작업 끝 */
+
+/* 공지사항 영역 */
+/*
+#tabArea #tabContent1 #bbsNotice span{  처음엔 요소이름 다 적어주기
+    border: 1px solid #000;
+}
+*/
+#tabArea #tabContent1 {
+    padding: 6px 32px 6px 16px;
+}
+
+/*
+#tabArea #tabContent1 #bbsNotice{
+    border: 1px solid #000;
+}
+*/
+#tabArea #tabContent1 #bbsNotice > li {
+    line-height: 32px;
+}
+
+#tabArea span:first-child {
+    width: 230px;
+
+    display: inline-block;
+    /* span은 인라인 요소라 넓이 지정안되기 떄문에 */
+}
+
+/* 공지사항 영역 끝 */
+
+/* 갤러리 영역 */
+#tabArea #tabContent2{
+  text-align: center;
+}
+
+img {
+    vertical-align: middle;
+    /* 대부분 부모요소에 세로정렬일 하지만 이미지요소의 경우 자신에게 세로정렬을 적용한다.*/
+}
+
+/* 갤러리 끝 */
+
+/* 멀티탭 끝 */
+
+/* 멀티탭 클릭 기능 구현 */
+button:nth-child(2) {
+    border: none;
+    top: 0px;
+    left: -5px;
+}
+#tabArea #tabContent2{
+    display: none;
+}
+/* 멀티탭 클릭 기능 구현 끝 */
